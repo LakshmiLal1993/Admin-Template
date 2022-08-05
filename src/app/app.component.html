@@ -1,0 +1,24 @@
+
+<ng-sidebar-container>
+    <ng-sidebar [opened]="opened">
+      <h1 style="color:black ;">ICT Academy of Kerala</h1>
+      <img src="../assets/admin1.png" alt="Girl in a jacket" width="180px" height="180px">
+      <h4 style="color:black ;">Hello Admin!</h4>
+      
+      <ul class ="menu">
+        <li><a routerLink ="/" (click)="toggleSidebar()">Dashboard</a></li>
+        <li><a routerLink ="/associates" (click)="toggleSidebar()">Manage Associates</a></li>
+        <li><a routerLink ="/bookings" (click)="toggleSidebar()">Manage Bookings</a></li>
+        <li><a routerLink ="/">Logout</a></li>
+      </ul>
+      <button (click)="toggleSidebar()">CLOSE</button>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+      <!--page header-->
+      <button (click)="toggleSidebar()">Back</button>
+
+      <!--page body-->
+      <router-outlet></router-outlet>
+    </div>
+    
+</ng-sidebar-container>
